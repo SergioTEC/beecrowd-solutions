@@ -1,4 +1,5 @@
 package beecrowd.solucoes.iniciante
+import java.util.Scanner
 
     /*
 
@@ -19,32 +20,20 @@ package beecrowd.solucoes.iniciante
                          16 2 5.10
 
     Exemplos de Saída: VALOR A PAGAR: R$ 15.50
-
-    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-    Questão BEECROWD 1010 apresenta Runtime error no beecrowd
-    RUNTIME ERROR
-
-    Exception in thread "main" java.lang.NumberFormatException: For input string: "12 2 5.30"
-    at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
-    at java.lang.Integer.parseInt(Integer.java:580)
-    at java.lang.Integer.parseInt(Integer.java:615)
-    at MainKt.main(Main.kt:5)
-
-
      */
-
 fun main(args: Array<String>) {
 
-    val p1 = readLine()!!.toInt()
-    val np1 = readLine()!!.toInt()
-    val vp1 = readLine()!!.toDouble()
+    val leitor = Scanner(System.`in`)
 
-    val p2 = readLine()!!.toInt()
-    val np2 = readLine()!!.toInt()
-    val vp2 = readLine()!!.toDouble()
+    val p1: Int = leitor.nextInt()
+    val np1: Int = leitor.nextInt()
+    val vp1: Double = leitor.nextDouble()
 
-    val valorTotal = np1 * vp1 + np2 * vp2
+    val p2: Int = leitor.nextInt()
+    val np2: Int = leitor.nextInt()
+    val vp2: Double = leitor.nextDouble()
+
+    val valorTotal = (np1 * vp1) + (np2 * vp2)
 
     println("VALOR A PAGAR: R$ ${"%.2f".format(valorTotal)}")
 }
