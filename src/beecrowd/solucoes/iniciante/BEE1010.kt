@@ -1,4 +1,5 @@
 package beecrowd.solucoes.iniciante
+
 import java.util.Scanner
 
     /*
